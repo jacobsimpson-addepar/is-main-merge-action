@@ -1,0 +1,10 @@
+name: 'PR Base Branch Check'
+description: 'Check a PR to ensure the base branch is the expected value.'
+inputs:
+  expected-base-branch:  # id of input
+    description: 'The name of the branch that should be the base of the PR before it can merge.'
+    required: true
+    default: 'main'
+runs:
+  using: 'node12'
+  main: 'index.js'
